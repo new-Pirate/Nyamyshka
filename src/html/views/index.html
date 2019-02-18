@@ -1,0 +1,76 @@
+<% var data = {
+title: "Нямушка",
+}; %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+		<main class="itemsBlock">
+			<section class="item">
+				<div class="item_point item_default">
+					<svg viewBox="0 0 305.36 456" role="img">
+						<path class="item_bg"
+							d="M603.72,147.52a12.25,12.25,0,0,0-8.48-3.51H347.66l-41.79,42.11h0V584a12,12,0,0,0,12,12H595.24a12,12,0,0,0,12-12V156A12,12,0,0,0,603.72,147.52Z"
+							transform="translate(-303.87 -142.01)" fill="#f2f2f2" stroke="#1698d9" stroke-width="4" />
+					</svg>
+					<div class="item_pos item_title">Сказочное заморское яство</div>
+					<h2 class="item_pos item_nameBrand">Нямушка</h2>
+					<div class="item_pos item_taste">с фуа-гра</div>
+					<div class="item_pos item_desc">
+						<p><span class="item_numbers">10</span> порций</p>
+						<p>мышь в подарок</p>
+					</div>
+					<div class="item_pos item_img">
+						<img src="uploads/cat.png" alt="cat">
+					</div>
+					<div class="item_pos item_weight">0,5 <p>кг</p>
+					</div>
+				</div>
+				<div class="item_signa">Чего сидишь? Порадуй котэ,<span class="item_buy" role="button"> купи.</span></div>
+			</section>
+			<section class="item">
+				<div class="item_point item_default">
+					<svg viewBox="0 0 305.36 456" role="img">
+						<path class="item_bg"
+							d="M603.72,147.52a12.25,12.25,0,0,0-8.48-3.51H347.66l-41.79,42.11h0V584a12,12,0,0,0,12,12H595.24a12,12,0,0,0,12-12V156A12,12,0,0,0,603.72,147.52Z"
+							transform="translate(-303.87 -142.01)" fill="#f2f2f2" stroke="#1698d9" stroke-width="4" />
+					</svg>
+					<div class="item_pos item_title">Сказочное заморское яство</div>
+					<h2 class="item_pos item_nameBrand">Нямушка</h2>
+					<div class="item_pos item_taste">с рыбой</div>
+					<div class="item_pos item_desc">
+						<p><span class="item_numbers">40</span> порций</p>
+						<p><span class="item_numbers">2</span> мыши в подарок</p>
+					</div>
+					<div class="item_pos item_img">
+						<img src="uploads/cat.png" alt="cat">
+					</div>
+					<div class="item_pos item_weight">2 <p>кг</p>
+					</div>
+				</div>
+				<div class="item_signa">Чего сидишь? Порадуй котэ,<span class="item_buy" role="button"> купи.</span></div>
+			</section>
+			<section class="item">
+				<div class="item_point item_disabled">
+					<svg viewBox="0 0 305.36 456" role="img">
+						<path class="item_bg"
+							d="M603.72,147.52a12.25,12.25,0,0,0-8.48-3.51H347.66l-41.79,42.11h0V584a12,12,0,0,0,12,12H595.24a12,12,0,0,0,12-12V156A12,12,0,0,0,603.72,147.52Z"
+							transform="translate(-303.87 -142.01)" fill="#f2f2f2" stroke="#1698d9" stroke-width="4" />
+					</svg>
+					<div class="item_pos item_title">Сказочное заморское яство</div>
+					<h2 class="item_pos item_nameBrand">Нямушка</h2>
+					<div class="item_pos item_taste">с курой</div>
+					<div class="item_pos item_desc">
+						<p><span class="item_numbers">100</span> порций</p>
+						<p><span class="item_numbers">5</span> мышей в подарок</p>
+						<p>заказчик доволен</p>
+					</div>
+					<div class="item_pos item_img">
+						<img src="uploads/cat.png" alt="cat">
+					</div>
+					<div class="item_pos item_weight">5 <p>кг</p>
+					</div>
+				</div>
+				<div class="item_signa">Чего сидишь? Порадуй котэ,<span class="item_buy" role="button"> купи.</span></div>
+			</section>
+		</main>
+	</div>
+
+<%= _.template(require('./../includes/footer.html'))(data) %>

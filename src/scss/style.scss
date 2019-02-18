@@ -1,0 +1,230 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "media"; // Always at the end
+
+body {
+    background: url("../img/background.jpg") center 0 repeat-y;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respondCustom($esFrom, $mdTo) {
+        background: url("../img/background.jpg") center 0 repeat-y;
+        height: 100%;
+        padding: 40px;
+    }
+
+    .container {
+        width: 1120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .title {
+            font-family: $Exo-Thin;
+            font-size: 36px;
+            color: #fff;
+            margin: 0;
+            font-weight: normal;
+            text-shadow: 0 1px 0 #000;
+            margin-bottom: 24px;
+        }
+
+        .itemsBlock {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            @include respondCustom($mdFrom, $mdTo) {
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            @include respondCustom($esFrom, $smTo) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .item {
+                width: 320px;
+                position: relative;
+
+                @include respondCustom($esFrom, $mdTo) {
+                    margin-top: 20px;
+                }
+
+                &_point{
+                    cursor: pointer;
+                    position: relative;
+                    height: 480px;
+                }
+
+                &_bg {
+                    width: 320px;
+                    height: 480px;
+                    position: absolute;
+                }
+
+                &_pos {
+                    position: absolute;
+                }
+
+                &_title {
+                    font-family: $Trebuchet-MS;
+                    font-size: 16px;
+                    color: #666;
+                    top: 22px;
+                    left: 48px;
+                    position: absolute;
+                }
+
+                &_nameBrand {
+                    font-family: $Trebuchet-MS;
+                    font-size: 48px;
+                    color: #000;
+                    font-weight: 700;
+                    letter-spacing: 1.4px;
+                    top: 46px;
+                    left: 48px;
+                    position: absolute;
+                    margin: 0;
+                }
+
+                &_taste {
+                    font-family: $Trebuchet-MS;
+                    font-size: 24px;
+                    color: #000;
+                    letter-spacing: 1px;
+                    top: 100px;
+                    left: 48px;
+                    position: absolute;
+                }
+
+                &_desc {
+                    font-family: $Trebuchet-MS;
+                    font-size: 14px;
+                    color: #666666;
+                    left: 48px;
+                    top: 140px;
+                    position: absolute;
+                    text-align: left;
+                    
+                    p {
+                        margin: 0;
+                    }
+                }
+
+                &_numbers {
+                    font-weight: 700;
+                }
+
+                &_img {
+                    bottom: 1px;
+                    left: 4px;
+                    position: absolute;
+
+                    img {
+                        width: 310px;
+                    }
+                }
+
+                &_weight {
+                    font-family: $Trebuchet-MS;
+                    font-size: 42px;
+                    color: #fff;
+                    width: 81px;
+                    height: 81px;
+                    background: #1698d9;
+                    border-radius: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    top: 384px;
+                    left: 224px;
+
+                    p {
+                        font-size: 21px;
+                        margin: 0;
+                    }
+                }
+
+                &_signa {
+                    font-family: $Trebuchet-MS;
+                    font-size: 13px;
+                    color: #fff;
+                    text-align: center;
+                    top: 494px;
+                    margin-top: 12px;
+                }
+
+                &_buy {
+                    color: #1698d9;
+                    border-bottom: 1px dashed #1698d9;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #2ea8e6;
+                    }
+                }
+
+                &_default {
+
+                    &:hover {
+
+                        .item_bg {
+                            stroke: #2ea8e6;
+                        }
+
+                        .item_weight {
+                            background: #2ea8e6;
+                        }
+                    }
+                }
+
+                &_selected {
+
+                    .item_bg {
+                        stroke: #d91667;
+                    }
+
+                    .item_weight {
+                        background: #d91667;
+                    }
+
+                    &:hover {
+                        .item_bg {
+                            stroke: #e62e7a;
+                        }
+
+                        .item_weight {
+                            background: #e62e7a;
+                        }
+                    }
+                }
+
+                &_disabled {
+                    .item_pos {
+                        opacity: 0.5;
+                    }
+
+                    .item_weight {
+                        opacity: 1;
+                    }
+
+                    .item_bg {
+                        stroke: #b3b3b3;
+                    }
+
+                    .item_weight {
+                        background: #b3b3b3;
+                    }
+                }
+            }
+        }
+    }
+}
